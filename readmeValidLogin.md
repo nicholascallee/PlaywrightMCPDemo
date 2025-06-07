@@ -18,7 +18,7 @@ This project demonstrates Playwright automation for the SauceDemo valid login sc
 
 To run the test, use:
 ```bash
-npx playwright test temp_codegen/saucedemovalidlogin.spec.ts
+npx playwright test saucedemovalidlogin.spec.ts
 ```
 
 ## Notes

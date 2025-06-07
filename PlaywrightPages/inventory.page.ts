@@ -18,6 +18,10 @@ export class InventoryPage extends BasePage {
     await this.page.locator(this.elements.firstProduct).first().locator('button').click();
   }
 
+  async removeFirstProductFromCart() {
+    await this.page.locator(this.elements.firstProduct).first().locator('button').click();
+  }
+
   async expectFirstProductButtonToBe(text: string) {
     await expect(
       this.page.locator(this.elements.firstProduct).first().locator('button')
