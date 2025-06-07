@@ -1,19 +1,9 @@
-import { test } from '@playwright/test';
-import { expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../PlaywrightPages/login.page';
 
-test('SauceDemoValidLogin', async ({ page, context }) => {
-  // Navigate to URL
-  await page.goto('https://www.saucedemo.com');
-
-  // Fill input field
-  await page.fill('#user-name', 'standard_user');
-
-  // Fill input field
-  await page.fill('#password', 'secret_sauce');
-
-  // Click element
-  await page.click('#login-button');
-
-  // Verify URL
+test('SauceDemoValidLogin', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await loginPage.goto('https://www.saucedemo.com');
+  await loginPage.login('standard_user', 'secret_sauce');
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 }); 

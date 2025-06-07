@@ -1,0 +1,21 @@
+I want to create a test automation framework with AI.
+Im using playwright mcp to enable stable and consistent creation of playwright code.
+I first added a test to login.
+    I have the AI write the test and a readme explaining the process and how to run it
+Next, I added a test on adding an item to the cart.
+    I used very similar prompting here
+Then I expanded the complexity by asking the AI to build out a page object model framework for the 2 current tests
+    I broke this step into 2 pieces. 1 for the page files and another for the page elements files. Both basepage and baseelements were created and the specific pages inherit these pages.
+
+
+Thoughts:
+This whole process has taken me under 20 minutes. I have stoodup a large chunck of an automation framework with no previous knowledge of Playwright or Typescript. AI has enabled me to create a clean and well documented framework in a fraction of the time it would have taken me without it.
+
+
+Next:
+
+The real test of the AIs ability will be how it handles once the complexity is increased. I want to keep adding components regularly contained in an automation framework and then build out a few complex tests. I will then report on the process and its current ability to help in real world applications.
+
+add a base testing class
+add a database class
+add more tests
