@@ -16,6 +16,5 @@ Next:
 
 The real test of the AIs ability will be how it handles once the complexity is increased. I want to keep adding components regularly contained in an automation framework and then build out a few complex tests. I will then report on the process and its current ability to help in real world applications.
 
-add a base testing class
 add a database class
 add more tests
