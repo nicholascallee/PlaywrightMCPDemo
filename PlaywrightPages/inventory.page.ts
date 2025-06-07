@@ -31,8 +31,4 @@ export class InventoryPage extends BasePage {
   async goToCart() {
     await this.click(this.elements.cartLink);
   }
-
-  async getCartFirstProductName(): Promise<string> {
-    return await this.page.locator(this.elements.cartFirstProductName).first().innerText();
-  }
 } 

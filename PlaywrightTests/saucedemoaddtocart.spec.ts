@@ -1,11 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../PlaywrightPages/login.page';
 import { InventoryPage } from '../PlaywrightPages/inventory.page';
+import { CartPage } from '../PlaywrightPages/cart.page';
 import { DataClass } from '../data/data.class';
 
 test('Add to cart scenario on saucedemo.com', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const inventoryPage = new InventoryPage(page);
+  const cartPage = new CartPage(page);
 
   await loginPage.goto(DataClass.baseUrl);
   await loginPage.login('standard_user', 'secret_sauce');
@@ -15,6 +17,6 @@ test('Add to cart scenario on saucedemo.com', async ({ page }) => {
   await inventoryPage.addFirstProductToCart();
   await inventoryPage.expectFirstProductButtonToBe('Remove');
   await inventoryPage.goToCart();
-  const cartProductName = await inventoryPage.getCartFirstProductName();
+  const cartProductName = await cartPage.getCartFirstProductName();
   expect(cartProductName).toBe(firstProductName);
 }); 

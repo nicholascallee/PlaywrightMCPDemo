@@ -23,3 +23,5 @@ add more tests
 Update 1: 
 added the database class.
 
+Update 2:
+upon adding another test to remove an item from the cart, it did not know to create a new page for the cart page. I ended up prompting it to add that page and use it in the test.
