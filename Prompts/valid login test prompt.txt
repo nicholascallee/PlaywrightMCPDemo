@@ -1,0 +1,14 @@
+Use the Playwright MCP Server to create Playwright tests for the following scenario:
+All the work of creating the code for the browser automation must be routed through the MCP Server. Do not simulate interactions or bypass the MCP in any part of the flow during code creation.
+
+Valid Login:
+1. open www.saucedemo.com.
+2. enter standard_user into the username text box
+3. enter secret_sauce into the password text box
+4. click login
+5. verify on the url https://www.saucedemo.com/inventory.html
+6. Close the browser.
+
+Write the code to a file called saucedemo{NAME OF TEST}.spec.ts
+put the code file under PlaywrightTests folder
+Create a readme{NAME OF TEST}.md file to explain how to run the tests, and the structure of the project.
