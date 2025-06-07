@@ -1,0 +1,11 @@
+Use the Playwright MCP Server to create Playwright supporting framework for the 2 current Playwright tests.
+All the work of creating the code for the browser automation must be routed through the MCP Server. Do not simulate interactions or bypass the MCP in any part of the flow during code creation.
+
+expand on the current page object model strucured framework by adding:
+1. data class
+
+put the base url in the data class
+change the current typescript file tests to they reference the url from the data class instead of hard coding it
+put the data class in a folder called data
+
+Create a readmeDataClassPageObjectModel.md file to explain the new structure of the project.
